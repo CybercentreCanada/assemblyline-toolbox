@@ -3,6 +3,10 @@
 from typing import Optional
 
 
+def get_hostip() -> str:
+    """A platform specific function to get the current host's ip address."""
+
+
 class BufferedCalculator:
     """An incremental entropy calculator for large streams of data."""
     def len(self) -> int:
