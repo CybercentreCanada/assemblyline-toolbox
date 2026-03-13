@@ -4,10 +4,11 @@ version = 4
 
 [[package]]
 name = "assemblyline-toolbox"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "ffuzzy",
  "pyo3",
+ "tlsh2",
 ]
 
 [[package]]
@@ -182,6 +183,12 @@ name = "target-lexicon"
 version = "0.13.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "adb6935a6f5c20170eeceb1a3835a49e12e19d792f6dd344ccc76a985ca5a6ca"
+
+[[package]]
+name = "tlsh2"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d1ca7b6482798eaf06ef6a4a5e1211e370758888698cfff4a53142441ef5143"
 
 [[package]]
 name = "unicode-ident"

@@ -34,3 +34,26 @@ impl SsdeepHasher {
     }
 }
 
+
+#[pyclass]
+pub struct TlshHasher {
+    hasher: tlsh2::TlshDefaultBuilder,
+}
+
+#[pymethods]
+impl TlshHasher {
+    #[new]
+    pub fn py_new() -> Self {
+        Self{ hasher: tlsh2::TlshDefaultBuilder::new() }
+    }
+
+    pub fn update(&mut self, data: &[u8]) {
+        self.hasher.update(data);
+    }
+
+    pub fn digest(&self) -> Option<String> {
+        self.hasher.build()
+            .map(|hash| String::from_utf8_lossy(hash.hash().as_slice()).to_string())
+    }
+}
+
