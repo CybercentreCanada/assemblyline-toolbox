@@ -30,6 +30,10 @@ class SsdeepHasher:
     def digest(self) -> str:
         """Calculate the ssdeep hash of all the data processed."""
 
+    @staticmethod
+    def hash(data: bytes | str) -> str:
+        """Calculate the ssdeep from a buffer."""
+
 
 class TlshHasher:
     """A wrapper around the tlsh hash library."""
@@ -39,3 +43,7 @@ class TlshHasher:
         """Process a chunk of bytes."""
     def digest(self) -> Optional[str]:
         """Calculate the ssdeep hash of all the data processed."""
+
+    @staticmethod
+    def hash(data: bytes | str) -> Optional[str]:
+        """Calculate the tlsh hash from a buffer."""
