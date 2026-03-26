@@ -12,10 +12,10 @@ _This does mean that the rust code available to python packages will be slightly
 
 # Assemblyline toolbox
 
-Liaisons permettant d'exposer les composants Rust à Python.
+Integration permettant d'exposer les composants Rust à Python.
 
-## État du dépôt
+## Description
 
-Ce paquet est séparé des autres composants Rust d'Assemblyline parce que la chaîne d'outils `maturin` qu'il utilise intègre des hooks d'action pour GitHub, que notre pipeline de construction principal n'utilise pas. En attendant le développement de ces liaisons ou leur intégration à notre pipeline principal, ce référentiel permet de créer des paquets Python dont la version peut être fixée dans les paquets Python d'Assemblyline.
+Cette librarie est séparé des autres composants Rust d'Assemblyline parce que la chaîne d'outils `maturin` qu'il utilise intègre des hooks d'action pour GitHub, que notre pipeline de construction principal n'utilise pas. En attendant le développement de ces liaisons ou leur intégration à notre pipeline principal, ce référentiel permet de créer des paquets Python dont la version peut être fixée dans les paquets Python d'Assemblyline.
 
 _Cela signifie que le code Rust disponible pour les paquets Python sera légèrement décalé et nécessitera des mises à jour manuelles sur ce dépôt._
