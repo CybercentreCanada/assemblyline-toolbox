@@ -59,7 +59,8 @@ class TestTransportLocal:
 
         download_path = str(tmp_path / "downloaded.txt")
         t.download("uploaded.txt", download_path)
-        assert open(download_path, "rb").read() == b"upload test"
+        with open(download_path, "rb") as fh:
+            assert fh.read() == b"upload test"
 
     def test_list(self, tmp_path):
         t = TransportLocal(base=str(tmp_path))
@@ -116,7 +117,8 @@ class TestFileStore:
 
         dest = str(tmp_path / "dest.bin")
         store.download("stored.bin", dest)
-        assert open(dest, "rb").read() == b"binary data"
+        with open(dest, "rb") as fh:
+            assert fh.read() == b"binary data"
         store.close()
 
     def test_context_manager(self, tmp_path):

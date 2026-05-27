@@ -75,7 +75,7 @@ class TransportS3(Transport):
                 self.client = session.client(
                     "s3",
                     aws_access_key_id=accesskey,
-                    aws_secretkey_access_key=secretkey,
+                    aws_secret_access_key=secretkey,
                     endpoint_url=self.endpoint_url,
                     region_name=aws_region,
                     use_ssl=self.use_ssl,

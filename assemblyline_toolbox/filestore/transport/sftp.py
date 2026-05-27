@@ -167,7 +167,7 @@ class TransportSFTP(Transport):
             content_data = content
 
         fd, src_path = tempfile.mkstemp(prefix="filestore.local_path")
-        with open(fd, "wb") as f:
+        with os.fdopen(fd, "wb") as f:
             f.write(content_data)
 
         self.makedirs(dirname)
